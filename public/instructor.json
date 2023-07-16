@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "numClassesTaken": 5
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "numClassesTaken": 3
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "Mike Johnson",
+    "email": "mike.johnson@example.com",
+    "numClassesTaken": 8
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "Sarah Williams",
+    "email": "sarah.williams@example.com",
+    "numClassesTaken": 2
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "David Lee",
+    "email": "david.lee@example.com",
+    "numClassesTaken": 6
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/JBCXW14/pexels-yan-krukau-8520464.jpg",
+    "name": "Emily Brown",
+    "email": "emily.brown@example.com",
+    "numClassesTaken": 4
+  }
+]

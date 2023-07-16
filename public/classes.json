@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "class1.jpg",
+    "name": "Yoga Basics",
+    "instructor": "Jane Smith",
+    "availableSeats": 10,
+    "price": "$20"
+  },
+  {
+    "id": 2,
+    "image": "class2.jpg",
+    "name": "Cardio Kickboxing",
+    "instructor": "John Doe",
+    "availableSeats": 8,
+    "price": "$25"
+  },
+  {
+    "id": 3,
+    "image": "class3.jpg",
+    "name": "Pilates Fusion",
+    "instructor": "Sarah Johnson",
+    "availableSeats": 15,
+    "price": "$30"
+  },
+  {
+    "id": 4,
+    "image": "class4.jpg",
+    "name": "Zumba Fitness",
+    "instructor": "Mike Thompson",
+    "availableSeats": 5,
+    "price": "$15"
+  },
+  {
+    "id": 5,
+    "image": "class5.jpg",
+    "name": "Hatha Yoga",
+    "instructor": "Emily Davis",
+    "availableSeats": 12,
+    "price": "$18"
+  },
+  {
+    "id": 6,
+    "image": "class6.jpg",
+    "name": "Spin Cycling",
+    "instructor": "David Wilson",
+    "availableSeats": 20,
+    "price": "$22"
+  }
+]
