@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     const commonLink = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link>Instructors</Link></li>
-        <li><Link>Classes</Link></li>
+        <li><Link to='all-instructor'>Instructors</Link></li>
+        <li><Link to='all-class'>Classes</Link></li>
         <li><Link>Dashboard</Link></li>
         <li><Link>Login</Link></li>
-        
+
     </>
     return (
         <div className="navbar bg-base-100">

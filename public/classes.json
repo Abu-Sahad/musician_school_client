@@ -1,48 +1,48 @@
 [
   {
     "id": 1,
-    "image": "class1.jpg",
-    "name": "Yoga Basics",
+    "image": "https://i.ibb.co/ZMKWXNY/BASS-GUITER.jpg",
+    "name": "Bass guiter",
     "instructor": "Jane Smith",
     "availableSeats": 10,
     "price": "$20"
   },
   {
     "id": 2,
-    "image": "class2.jpg",
-    "name": "Cardio Kickboxing",
+    "image": "https://i.ibb.co/7nxSkmG/drumset.jpg",
+    "name": "Drum Set Kit",
     "instructor": "John Doe",
     "availableSeats": 8,
     "price": "$25"
   },
   {
     "id": 3,
-    "image": "class3.jpg",
-    "name": "Pilates Fusion",
+    "image": "https://i.ibb.co/2vd37pw/piano.jpg",
+    "name": "Piano",
     "instructor": "Sarah Johnson",
     "availableSeats": 15,
     "price": "$30"
   },
   {
     "id": 4,
-    "image": "class4.jpg",
-    "name": "Zumba Fitness",
+    "image": "https://i.ibb.co/SR0gg8Y/piano-Update.jpg",
+    "name": "Violin",
     "instructor": "Mike Thompson",
     "availableSeats": 5,
     "price": "$15"
   },
   {
     "id": 5,
-    "image": "class5.jpg",
-    "name": "Hatha Yoga",
+    "image": "https://i.ibb.co/HLSxNmR/TRUMPET.jpg",
+    "name": "Trumpet",
     "instructor": "Emily Davis",
-    "availableSeats": 12,
+    "availableSeats": 0,
     "price": "$18"
   },
   {
     "id": 6,
-    "image": "class6.jpg",
-    "name": "Spin Cycling",
+    "image": "https://i.ibb.co/Gs8zHr9/BANJO.jpg",
+    "name": "Banjo",
     "instructor": "David Wilson",
     "availableSeats": 20,
     "price": "$22"
