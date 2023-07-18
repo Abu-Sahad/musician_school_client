@@ -1,13 +1,54 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import useClasses from "../../../component/hook/useClasses";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ClassSection = () => {
-    const [classes, setClasses] = useState([]);
+    const { user } = useContext(AuthContext)
+    const [classes] = useClasses()
+    const navigate = useNavigate()
+    const location = useLocation()
+    const handleSelectButton = classItem => {
+        console.log(classItem)
+        if (user && user.email) {
+            const selectBookClass = { classBookId: classItem._id, name: classItem.name, image: classItem.image, price: classItem.price, email: user.email }
+            fetch('http://localhost:5000/bookCart', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(selectBookClass)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Your class has been Booked Successfully',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                    else {
+                        Swal.fire({
+                            text: "Please login to order the food",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, delete it!'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                navigate('/login')
+                            }
+                        })
+                    }
+                })
+        }
+    }
 
-    useEffect(() => {
-        fetch('classes.json')
-            .then(res => res.json())
-            .then(data => setClasses(data));
-    }, []);
 
     console.log(classes);
 
@@ -24,7 +65,7 @@ const ClassSection = () => {
                         Available Seats: {classItem.availableSeats}
                     </p>
                     <p className="text-lg font-bold mb-4">Price: {classItem.price}</p>
-                    <button
+                    <button onClick={() => handleSelectButton(classItem)}
                         className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
                             }`}
                         disabled={classItem.availableSeats === 0}
