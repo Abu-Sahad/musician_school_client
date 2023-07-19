@@ -7,6 +7,8 @@ import ClassSection from "../Pages/Home/ClassSection/ClassSection";
 import Instructor from "../Pages/Home/Instructor/Instructor";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
+import Dashboard from "../Layout/Dashboard";
+import MyBookCard from "../Pages/Dashboard/MyBookCard/MyBookCard";
 
 
 export const router = createBrowserRouter([
@@ -36,4 +38,14 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: 'dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'mycart',
+        element: <MyBookCard></MyBookCard>
+      }
+    ]
+  }
 ]);

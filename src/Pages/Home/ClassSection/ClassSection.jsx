@@ -3,12 +3,14 @@ import useClasses from "../../../component/hook/useClasses";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import useBookCart from "../../../component/hook/useBookCart";
 
 const ClassSection = () => {
     const { user } = useContext(AuthContext)
-    const [classes] = useClasses()
-    const navigate = useNavigate()
-    const location = useLocation()
+    const [, refetch] = useBookCart();
+    const [classes] = useClasses();
+    const navigate = useNavigate();
+    const location = useLocation();
     const handleSelectButton = classItem => {
         console.log(classItem)
         if (user && user.email) {
@@ -23,6 +25,7 @@ const ClassSection = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
+                        refetch();//refetch cart on navbar
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -41,7 +44,7 @@ const ClassSection = () => {
                             confirmButtonText: 'Yes, delete it!'
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                navigate('/login')
+                                navigate('/login', { state: { from: location } })
                             }
                         })
                     }
