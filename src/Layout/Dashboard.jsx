@@ -1,4 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import { FaShoppingCart } from 'react-icons/fa';
+import { MdPayment } from "react-icons/md";
 
 const Dashboard = () => {
     return (
@@ -14,8 +16,8 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
                         {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <li><Link to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</Link></li>
+                        <li><Link to='/dashboard/payment'><MdPayment></MdPayment> Payment</Link></li>
                     </ul>
 
                 </div>
