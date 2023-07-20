@@ -10,6 +10,7 @@ import Registration from "../Pages/Registration/Registration";
 import Dashboard from "../Layout/Dashboard";
 import MyBookCard from "../Pages/Dashboard/MyBookCard/MyBookCard";
 import PrivateRoute from "./PrivateRoute";
+import ManageAllUsers from "../Pages/Dashboard/MangeAllUser/ManageAllUsers";
 
 
 export const router = createBrowserRouter([
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: 'mycart',
         element: <MyBookCard></MyBookCard>
+      },
+      {
+        path: 'manageUsers',
+        element:<ManageAllUsers></ManageAllUsers>
       }
     ]
   }

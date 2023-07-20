@@ -1,8 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaHome, FaShoppingCart } from 'react-icons/fa';
 import { MdPayment } from "react-icons/md";
 
 const Dashboard = () => {
+
+    const isAdmin = true;
+    // TODO: admin panel 
     return (
         <div>
             <div className="drawer lg:drawer-open">
@@ -15,9 +18,19 @@ const Dashboard = () => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                        {/* Sidebar content here */}
-                        <li><Link to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</Link></li>
-                        <li><Link to='/dashboard/payment'><MdPayment></MdPayment> Payment</Link></li>
+                        {
+                            isAdmin ? <>
+                                <li><Link to='/dashboard/admin'> <FaHome></FaHome> Admin Home</Link></li>
+                                <li><Link to='/dashboard/manageClass'>Manage Classes </Link></li>
+                                <li><Link to='/dashboard/manageUsers'>Manage User</Link></li>
+                            </> : <>
+                                <li><Link to='/dashboard/home'> <FaHome></FaHome> User Home</Link></li>
+                                <li><Link to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</Link></li>
+                                <li><Link to='/dashboard/payment'><MdPayment></MdPayment> Payment</Link></li>
+
+                            </>
+                        }
+
                     </ul>
 
                 </div>
