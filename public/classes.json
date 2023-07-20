@@ -5,7 +5,7 @@
     "name": "Bass guiter",
     "instructor": "Jane Smith",
     "availableSeats": 10,
-    "price": "$20"
+    "price": 20
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "name": "Drum Set Kit",
     "instructor": "John Doe",
     "availableSeats": 8,
-    "price": "$25"
+    "price": 25
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "name": "Piano",
     "instructor": "Sarah Johnson",
     "availableSeats": 15,
-    "price": "$30"
+    "price": 30
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "name": "Violin",
     "instructor": "Mike Thompson",
     "availableSeats": 5,
-    "price": "$15"
+    "price": 15
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "name": "Trumpet",
     "instructor": "Emily Davis",
     "availableSeats": 0,
-    "price": "$18"
+    "price": 18
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "name": "Banjo",
     "instructor": "David Wilson",
     "availableSeats": 20,
-    "price": "$22"
+    "price": 22
   }
 ]

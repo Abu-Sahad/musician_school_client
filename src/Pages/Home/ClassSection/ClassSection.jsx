@@ -67,7 +67,7 @@ const ClassSection = () => {
                     <p className={`text-sm mb-2 ${classItem.availableSeats === 0 ? "text-red-500" : ""}`}>
                         Available Seats: {classItem.availableSeats}
                     </p>
-                    <p className="text-lg font-bold mb-4">Price: {classItem.price}</p>
+                    <p className="text-lg font-bold mb-4">Price: ${classItem.price}</p>
                     <button onClick={() => handleSelectButton(classItem)}
                         className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
                             }`}

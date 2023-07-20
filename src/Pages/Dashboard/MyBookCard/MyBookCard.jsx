@@ -37,10 +37,14 @@ const MyBookCard = () => {
 
 
     }
+    const totalPrice = cart.reduce((acc, value) => acc + value.price, 0);
     return (
-        <div className="w-full">
-            <h1 className="text-center text-4xl font-bold mb-5">My Cart : {cart.length}</h1>
-
+        <div className=" w-full">
+            <div className='flex justify-around mb-10'>
+                <p className='uppercase font-semibold text-2xl'>Total Items: {cart.length}</p>
+                <p className='uppercase font-semibold text-2xl'>Total Price: {totalPrice}</p>
+                <button className="btn btn-warning">pay</button>
+            </div>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
@@ -52,7 +56,6 @@ const MyBookCard = () => {
                             <th>Name</th>
                             <th>price</th>
                             <th>Delete</th>
-                            <th>Payment</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -73,11 +76,9 @@ const MyBookCard = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    {item.price}
+                                    ${item.price}
                                 </td>
                                 <td><button onClick={() => handleDelete(item)} className="btn btn-error"><FaTrashAlt></FaTrashAlt>Delete</button></td>
-                                <td><button className="btn bg-slate-400 "><MdPayment></MdPayment> Pay</button></td>
-
                             </tr>)
                         }
 
