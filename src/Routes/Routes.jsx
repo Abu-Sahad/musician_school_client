@@ -11,6 +11,7 @@ import Dashboard from "../Layout/Dashboard";
 import MyBookCard from "../Pages/Dashboard/MyBookCard/MyBookCard";
 import PrivateRoute from "./PrivateRoute";
 import ManageAllUsers from "../Pages/Dashboard/MangeAllUser/ManageAllUsers";
+import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 
 
 export const router = createBrowserRouter([
@@ -50,8 +51,12 @@ export const router = createBrowserRouter([
       },
       {
         path: 'manageUsers',
-        element:<ManageAllUsers></ManageAllUsers>
-      }
+        element: <ManageAllUsers></ManageAllUsers>
+      },
+      {
+        path: 'addClass',
+        element: <AddClass></AddClass>
+      },
     ]
   }
 ]);

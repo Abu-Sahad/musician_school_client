@@ -65,7 +65,7 @@ const ManageAllUsers = () => {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user.role === 'admin' ? 'admin' : <button onClick={() => handleMakeAdmin(user)} className="btn btn-accent"><FaUserShield></FaUserShield></button>}</td>
-                        <td>{user.role === 'instructor' ? 'instructor' : <button onClick={()=>handleInstructor(user)} className="btn btn-secondary"><FaUserShield></FaUserShield></button>}</td>
+                        <td>{user.role === 'instructor' ? 'Instructor' : <button onClick={() => handleInstructor(user)} className="btn btn-secondary"><FaUserShield></FaUserShield></button>}</td>
                     </tr>)}
 
                 </tbody>

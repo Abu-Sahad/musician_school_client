@@ -28,6 +28,7 @@ const NavBar = () => {
                         <div className="badge badge-secondary">+{cart?.length || 0}</div>
                     </button>
                 </Link></li>
+                <><Link to='/dashboard'>Dashboard</Link></>
                 <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
             </> : <>
                 <li><Link to="/login">Login</Link></li>
