@@ -49,7 +49,7 @@ const Dashboard = () => {
                                     <>
                                         <li><Link to='/dashboard/home'> <FaHome></FaHome> User Home</Link></li>
                                         <li><Link to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</Link></li>
-                                        <li><Link to='/dashboard/payment'><MdPayment></MdPayment> Payment</Link></li>
+                                        <li><Link to='/dashboard/paymentHistory'><MdPayment></MdPayment> Payment History</Link></li>
 
                                     </>
                                 )

@@ -1,12 +1,12 @@
 import { FaTrashAlt } from "react-icons/fa";
-import { MdPayment } from "react-icons/md";
 import useBookCart from "../../../component/hook/useBookCart";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyBookCard = () => {
     const [cart, refetch] = useBookCart();
 
-
+    const totalPrice = cart.reduce((acc, value) => acc + value.price, 0);
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
@@ -37,13 +37,13 @@ const MyBookCard = () => {
 
 
     }
-    const totalPrice = cart.reduce((acc, value) => acc + value.price, 0);
+    
     return (
         <div className=" w-full">
             <div className='flex justify-around mb-10'>
                 <p className='uppercase font-semibold text-2xl'>Total Items: {cart.length}</p>
                 <p className='uppercase font-semibold text-2xl'>Total Price: {totalPrice}</p>
-                <button className="btn btn-warning">pay</button>
+                <Link to='/dashboard/payment'><button className="btn btn-warning">pay</button></Link>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">

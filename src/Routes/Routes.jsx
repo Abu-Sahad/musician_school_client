@@ -12,6 +12,7 @@ import MyBookCard from "../Pages/Dashboard/MyBookCard/MyBookCard";
 import PrivateRoute from "./PrivateRoute";
 import ManageAllUsers from "../Pages/Dashboard/MangeAllUser/ManageAllUsers";
 import AddClass from "../Pages/Dashboard/AddClass/AddClass";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: 'addClass',
         element: <AddClass></AddClass>
+      },
+      {
+        path: 'payment',
+        element: <Payment></Payment>
       },
     ]
   }
