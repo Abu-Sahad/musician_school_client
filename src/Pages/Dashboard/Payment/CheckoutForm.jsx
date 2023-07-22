@@ -5,6 +5,10 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import axios from "axios";
 const CheckoutForm = ({ cart, price, id }) => {
     const classId = id;
+
+    const singleClassItem = cart.find(item => item._id == id)
+    const singleclassBookId = singleClassItem?.classBookId
+    console.log(singleclassBookId)
     const { user } = useContext(AuthContext)
     const stripe = useStripe()
     const elements = useElements()
@@ -88,6 +92,7 @@ const CheckoutForm = ({ cart, price, id }) => {
                 price,
                 date: new Date(),
                 classId,
+                singleclassBookId,
                 quantity: cart.length,
                 cartItems: cart.map(item => item._id),
                 classItems: cart.map(item => item.classBookId

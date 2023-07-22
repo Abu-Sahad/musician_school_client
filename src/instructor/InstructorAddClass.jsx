@@ -10,10 +10,12 @@ const InstructorAddClass = () => {
         instructor: name,
         email: email,
         status: 'pending',
+        enrolled: 0,
     });
 
     const onChange = (e) => {
         setInfo((values) => ({ ...values, [e.target.name]: e.target.value }));
+
     };
 
     const handleSubmit = async (e) => {

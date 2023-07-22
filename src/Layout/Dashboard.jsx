@@ -36,7 +36,7 @@ const Dashboard = () => {
                         {
                             isAdmin ? (
                                 <>
-                                    <li><Link to='/dashboard/admin'> <FaHome></FaHome> Admin Home</Link></li>
+                                    <li><Link to='/'> <FaHome></FaHome> Home</Link></li>
                                     <li><Link to='/dashboard/admin-class-list'>Manage Classes</Link></li>
                                     <li><Link to='/dashboard/manageUsers'>Manage User</Link></li>
 
@@ -44,14 +44,18 @@ const Dashboard = () => {
                             )
                                 :
                                 (isInstructor ?
-                                    <><li><Link to='/dashboard/add-class'>Instructor Add Class</Link></li>
+
+                                    <>
+                                        <li><Link to='/'> <FaHome></FaHome> Home</Link></li>
+                                        <li><Link to='/dashboard/add-class'>Instructor Add Class</Link></li>
                                         <li><Link to='/dashboard/instructor-cart'>Instructor Class List</Link></li>
                                         <li><Link to='/dashboard/feedback'>Instructor Feedback</Link></li></>
                                     :
                                     <>
-                                        <li><Link to='/dashboard/home'> <FaHome></FaHome> User Home</Link></li>
+
+                                        <li><Link to='/'> <FaHome></FaHome> Home</Link></li>
                                         <li><Link to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</Link></li>
-                                        <li><Link to='/dashboard/paymentHistory'><MdPayment></MdPayment> Payment History</Link></li>
+                                        <li><Link to='/dashboard/payments'><MdPayment></MdPayment> Payment History</Link></li>
 
                                     </>
                                 )
