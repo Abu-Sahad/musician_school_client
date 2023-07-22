@@ -13,6 +13,10 @@ import PrivateRoute from "./PrivateRoute";
 import ManageAllUsers from "../Pages/Dashboard/MangeAllUser/ManageAllUsers";
 import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 import Payment from "../Pages/Dashboard/Payment/Payment";
+import InstructorAddClass from "../instructor/InstructorAddClass";
+import InstructorCard from "../instructor/InstructorCart";
+import FeedBack from "../instructor/FeedBack";
+import AdminClassList from "../admin/AdminClassList";
 
 
 export const router = createBrowserRouter([
@@ -62,6 +66,22 @@ export const router = createBrowserRouter([
         path: 'payment',
         element: <Payment></Payment>
       },
+      {
+        path: 'instructor-cart',
+        element: <InstructorCard />
+      },
+      {
+        path: 'add-class',
+        element: <InstructorAddClass />
+      },
+      {
+        path: 'feedback',
+        element: <FeedBack />
+      },
+      {
+        path: 'admin-class-list',
+        element: <AdminClassList />
+      }
     ]
   }
 ]);

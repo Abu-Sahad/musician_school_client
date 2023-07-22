@@ -19,24 +19,18 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/all-instructor'>Instructors</Link></li>
         <li><Link to='/all-class'>Classes</Link></li>
-        {
-            user ? <>
-                {/* <span>{user?.photoURL}</span> */}
-                <li><Link to='/dashboard/mycart'>
-                    <button className="btn">
-                        <FaShoppingCart></FaShoppingCart>
-                        <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                    </button>
-                </Link></li>
-                <><Link to='/dashboard'>Dashboard</Link></>
-                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
-            </> : <>
-                <li><Link to="/login">Login</Link></li>
-            </>
-        }
+        <li>
+            <Link to="/dashboard/mycart">
+                <button className="btn gap-2 btn-sm">
+                    <FaShoppingCart></FaShoppingCart>
+                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                </button>
+            </Link>
+        </li>
+
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-[#B9770E]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,6 +46,24 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1">
                     {commonLink}
                 </ul>
+            </div>
+
+            <div className="navbar-end">
+                {
+                    user ? <>
+                        {/* <span>{user?.photoURL}</span> */}
+                        {/* <li className="me-2"><Link to='/dashboard/mycart'>
+                            <button className="btn btn-sm">
+                                <FaShoppingCart></FaShoppingCart>
+                                <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                            </button>
+                        </Link></li> */}
+                        <Link className="me-2" to='/dashboard'>Dashboard</Link>
+                        <button onClick={handleLogOut} className="btn btn-ghost btn-sm">LogOut</button>
+                    </> : <>
+                        <li><Link to="/login">Login</Link></li>
+                    </>
+                }
             </div>
         </div>
     );

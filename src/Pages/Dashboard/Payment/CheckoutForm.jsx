@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import axios from "axios";
-import './CheckoutForm.css'
+//import './CheckoutForm.css'
 const CheckoutForm = ({ cart, price }) => {
     const { user } = useContext(AuthContext)
     const stripe = useStripe()

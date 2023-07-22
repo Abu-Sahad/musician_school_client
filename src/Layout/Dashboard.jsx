@@ -37,14 +37,16 @@ const Dashboard = () => {
                             isAdmin ? (
                                 <>
                                     <li><Link to='/dashboard/admin'> <FaHome></FaHome> Admin Home</Link></li>
-                                    <li><Link to='/dashboard/manageClass'>Manage Classes</Link></li>
+                                    <li><Link to='/dashboard/admin-class-list'>Manage Classes</Link></li>
                                     <li><Link to='/dashboard/manageUsers'>Manage User</Link></li>
 
                                 </>
                             )
                                 :
                                 (isInstructor ?
-                                    <><li><Link to='/dashboard/addClass'>Instructor Panel</Link></li></>
+                                    <><li><Link to='/dashboard/add-class'>Instructor Add Class</Link></li>
+                                        <li><Link to='/dashboard/instructor-cart'>Instructor Class List</Link></li>
+                                        <li><Link to='/dashboard/feedback'>Instructor Feedback</Link></li></>
                                     :
                                     <>
                                         <li><Link to='/dashboard/home'> <FaHome></FaHome> User Home</Link></li>
