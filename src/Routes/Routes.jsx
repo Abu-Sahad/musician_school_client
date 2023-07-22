@@ -18,6 +18,7 @@ import InstructorCard from "../instructor/InstructorCart";
 import FeedBack from "../instructor/FeedBack";
 import AdminClassList from "../admin/AdminClassList";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import PopularClassSection from "../Pages/Home/PopularClassSection/PopularClassSection";
 
 
 export const router = createBrowserRouter([

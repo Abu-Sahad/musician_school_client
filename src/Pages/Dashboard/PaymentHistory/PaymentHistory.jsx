@@ -19,7 +19,7 @@ const PaymentHistory = () => {
                 setLoading(false);
             });
     }, [user.email]);
-    console.log(transaction)
+    //console.log(transaction)
     return (
         <div>
             <table>
