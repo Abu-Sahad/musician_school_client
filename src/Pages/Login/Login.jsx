@@ -42,7 +42,7 @@ const Login = () => {
             <section className="h-screen">
                 <div className="h-full">
                     <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
-                        <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+                        <div className="hidden md:hidden lg:block md:shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
                             <img
                                 src="https://freesvg.org/img/instruments.png"
                                 className="w-full"

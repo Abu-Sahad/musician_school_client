@@ -3,8 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import axios from "axios";
-//import './CheckoutForm.css'
-const CheckoutForm = ({ cart, price }) => {
+const CheckoutForm = ({ cart, price, id }) => {
+    const classId = id;
     const { user } = useContext(AuthContext)
     const stripe = useStripe()
     const elements = useElements()
@@ -87,6 +87,7 @@ const CheckoutForm = ({ cart, price }) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
+                classId,
                 quantity: cart.length,
                 cartItems: cart.map(item => item._id),
                 classItems: cart.map(item => item.classBookId

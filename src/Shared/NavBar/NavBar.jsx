@@ -9,7 +9,6 @@ const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useBookCart()
     console.log(cart)
-
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -30,7 +29,7 @@ const NavBar = () => {
 
     </>
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-[#B9770E]">
+        <div className="navbar  bg-opacity-30 max-w-screen-xl bg-black text-[#bd8731]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +39,7 @@ const NavBar = () => {
                         {commonLink}
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl font-bold">Musicine School</Link>
+                <Link className="btn btn-ghost normal-case text-xl font-bold">Musicine</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -58,7 +57,7 @@ const NavBar = () => {
                                 <div className="badge badge-secondary">+{cart?.length || 0}</div>
                             </button>
                         </Link></li> */}
-                        <Link className="me-2" to='/dashboard'>Dashboard</Link>
+                        <button className="btn btn-sm text-[#bd8731]"><Link className="me-2" to='/dashboard'>Dashboard</Link></button>
                         <button onClick={handleLogOut} className="btn btn-ghost btn-sm">LogOut</button>
                     </> : <>
                         <li><Link to="/login">Login</Link></li>

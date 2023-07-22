@@ -46,7 +46,7 @@ const Registration = () => {
     const password = watch('password');
 
     return (
-        <div className="mb-4">
+        <div className="mb-4 mt-5">
             <h1 className="text-2xl font-bold mb-4 text-center">Registration Page</h1>
             <div className="card flex-shrink-0 shadow-2xl bg-base-100">
                 <div className="card-body">

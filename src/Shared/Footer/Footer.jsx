@@ -1,5 +1,4 @@
 import logo from '../../assets/logo.png';
-
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
@@ -52,9 +51,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="footer footer-center p-4 bg-base-300 text-base-content">
-                <div className="footer footer-center p-4 bg-base-300 text-base-content">
+            <div className="footer footer-center pb-4 bg-neutral text-neutral-content">
+                <div className="footer footer-center pb-4 bg-neutral text-neutral-content">
                     <div>
                         <p>
                             &copy; {currentYear} - All rights reserved by Music Instrument School Ltd

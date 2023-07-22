@@ -37,13 +37,13 @@ const MyBookCard = () => {
 
 
     }
-    
+
     return (
         <div className=" w-full">
             <div className='flex justify-around mb-10'>
                 <p className='uppercase font-semibold text-2xl'>Total Items: {cart.length}</p>
                 <p className='uppercase font-semibold text-2xl'>Total Price: {totalPrice}</p>
-                <Link to='/dashboard/payment'><button className="btn btn-warning">pay</button></Link>
+
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
@@ -56,7 +56,6 @@ const MyBookCard = () => {
                             <th>Name</th>
                             <th>price</th>
                             <th>Delete</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,6 +78,7 @@ const MyBookCard = () => {
                                     ${item.price}
                                 </td>
                                 <td><button onClick={() => handleDelete(item)} className="btn btn-error"><FaTrashAlt></FaTrashAlt>Delete</button></td>
+                                <td><Link to={`/dashboard/payment/${item._id}`}><button className="btn btn-warning">pay</button></Link></td>
                             </tr>)
                         }
 
