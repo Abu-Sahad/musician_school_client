@@ -11,7 +11,7 @@ const ButtonComponents = ({ item }) => {
             ...data,
             status: 'approve'
         };
-        await fetch('http://localhost:5000/admin-approve', {
+        await fetch('https://musician-instrument-school-abu-sahad.vercel.app/admin-approve', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const ButtonComponents = ({ item }) => {
                 reason: text // Store the user-entered message as the reason for denial
             };
 
-            await fetch('http://localhost:5000/admin-denied', {
+            await fetch('https://musician-instrument-school-abu-sahad.vercel.app/admin-denied', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

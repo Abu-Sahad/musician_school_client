@@ -4,6 +4,8 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useBookCart from "../../../component/hook/useBookCart";
+import useAdmin from "../../../component/hook/useAdmin";
+import useInstructor from "../../../component/hook/useInstructor";
 
 const ClassSection = () => {
     const { user } = useContext(AuthContext)
@@ -11,6 +13,11 @@ const ClassSection = () => {
     const [classes] = useClasses();
     const navigate = useNavigate();
     const location = useLocation();
+    const [isAdmin, isAdminLoading] = useAdmin();
+    console.log('admin panel', isAdmin)
+    const [isInstructor, isInstructorLoading] = useInstructor();
+    console.log('instructor panel', isInstructor)
+
     const handleSelectButton = classItem => {
         console.log(classItem)
         if (user && user.email) {
@@ -71,7 +78,7 @@ const ClassSection = () => {
                     <button onClick={() => handleSelectButton(classItem)}
                         className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
                             }`}
-                        disabled={classItem.availableSeats === 0}
+                        disabled={classItem.availableSeats === 0 || isAdmin === true || isInstructor === true}
                     >
                         Select
                     </button>
