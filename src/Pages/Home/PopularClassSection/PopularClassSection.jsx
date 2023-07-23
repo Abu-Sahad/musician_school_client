@@ -22,12 +22,13 @@ const PopularClassSection = () => {
     return (
 
         <>
-
-            <h1 className="text-center text-4xl font-bold mb-10 text-[#3498DB]">Popular Class Section</h1>
+            <h4 className="text-center text-2xl font-bold text-red-500">Our Classes</h4>
+            <h1 className="text-center text-5xl font-bold mb-10 text-[#3498DB]">Most Popular Classes</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 {popularClasses.map((classItem) => (
                     <div key={classItem.id} className="bg-white p-4 rounded-lg shadow-md">
+                        <img src={classItem?.image} alt={classItem.name} className="w-full h-48 object-cover mb-4" />
                         <h2 className="text-xl font-bold mb-2">{classItem?.name}</h2>
                         <p className="text-gray-600">Available Seats: {classItem?.availableSeats}</p>
                         <p className="text-gray-600">Price: {classItem?.price}</p>

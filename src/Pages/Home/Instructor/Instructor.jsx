@@ -10,7 +10,7 @@ const Instructor = () => {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
             {instructors.map((instructor, index) => (
                 <div key={index} className="bg-white p-4 rounded shadow">
                     <img src={instructor.image} alt={instructor.name} className="w-full h-48 object-cover mb-4" />

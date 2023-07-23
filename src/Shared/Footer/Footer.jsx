@@ -1,6 +1,12 @@
 import logo from '../../assets/logo.png';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const companyInfo = {
+        name: 'Music Instrument School',
+        address: 'Mirpur-10, Dhaka, Bangladesh',
+        phone: '466-759-632',
+        email: 'music@gamil.com',
+    };
     return (
         <footer>
             <div className="footer p-10 bg-neutral text-neutral-content">
@@ -11,6 +17,12 @@ const Footer = () => {
                         <br />
                         Providing reliable tech since 1992
                     </p>
+                </div>
+                <div>
+                    <span className="footer-title">Contract Info</span>
+                    <p>{companyInfo.address}</p>
+                    <p>Phone: {companyInfo.phone}</p>
+                    <p>Email: {companyInfo.email}</p>
                 </div>
                 <div>
                     <span className="footer-title">Social</span>
