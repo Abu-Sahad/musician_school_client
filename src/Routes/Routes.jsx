@@ -18,7 +18,7 @@ import InstructorCard from "../instructor/InstructorCart";
 import FeedBack from "../instructor/FeedBack";
 import AdminClassList from "../admin/AdminClassList";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
-import PopularClassSection from "../Pages/Home/PopularClassSection/PopularClassSection";
+import PageNotFound from "../Shared/PageNotFound/PageNotFound";
 
 
 export const router = createBrowserRouter([
@@ -46,6 +46,10 @@ export const router = createBrowserRouter([
         path: "registration",
         element: <Registration />,
       },
+      {
+        path: '*',
+        element: <PageNotFound></PageNotFound>
+      }
     ],
   },
   {
@@ -87,7 +91,15 @@ export const router = createBrowserRouter([
       {
         path: 'payments',
         element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: '*',
+        element: <PageNotFound></PageNotFound>
       }
+
     ]
-  }
+  },
+
+
+
 ]);
