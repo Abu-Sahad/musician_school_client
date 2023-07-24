@@ -126,7 +126,7 @@ const Registration = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
                             <div>
                                 <label className="block text-gray-700 font-bold mb-2" htmlFor="photoUrl">
-                                    Photo URL (optional)
+                                    Photo URL
                                 </label>
                                 <input
                                     className="border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
@@ -137,7 +137,7 @@ const Registration = () => {
                             </div>
                             <div>
                                 <label className="block text-gray-700 font-bold mb-2" htmlFor="gender">
-                                    Gender (optional)
+                                    Gender
                                 </label>
                                 <input
                                     className="border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
@@ -150,7 +150,7 @@ const Registration = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
                             <div>
                                 <label className="block text-gray-700 font-bold mb-2" htmlFor="phoneNumber">
-                                    Phone Number (optional)
+                                    Phone Number
                                 </label>
                                 <input
                                     className="border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
@@ -164,7 +164,7 @@ const Registration = () => {
                         <div>
                             <div>
                                 <label className="block text-gray-700 font-bold mb-2" htmlFor="address">
-                                    Address (optional)
+                                    Address
                                 </label>
                                 <textarea
                                     className="border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
