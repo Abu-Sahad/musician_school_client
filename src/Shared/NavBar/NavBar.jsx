@@ -49,13 +49,6 @@ const NavBar = () => {
             <div className="navbar-end">
                 {
                     user ? <>
-                        {/* <span>{user?.photoURL}</span> */}
-                        {/* <li className="me-2"><Link to='/dashboard/mycart'>
-                            <button className="btn btn-sm">
-                                <FaShoppingCart></FaShoppingCart>
-                                <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                            </button>
-                        </Link></li> */}
                         <div style={{
                             width: "25px",
                             height: "25px",
