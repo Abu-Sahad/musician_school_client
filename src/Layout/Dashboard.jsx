@@ -10,10 +10,7 @@ const Dashboard = () => {
     // TODO: admin panel 
 
     const [isAdmin, isAdminLoading] = useAdmin();
-    console.log('admin panel', isAdmin)
     const [isInstructor, isInstructorLoading] = useInstructor();
-    console.log('instructor panel', isInstructor)
-
     if (isAdminLoading) {
         return <div>Loading...</div>;
     }

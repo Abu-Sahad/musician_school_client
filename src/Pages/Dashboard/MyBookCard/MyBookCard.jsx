@@ -18,7 +18,7 @@ const MyBookCard = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/bookCart/${item._id}`, {
+                fetch(`https://musician-instrument-school.vercel.app/bookCart/${item._id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

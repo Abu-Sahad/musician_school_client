@@ -7,12 +7,11 @@ const PaymentHistory = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payment/${user.email}`)
+        fetch(`https://musician-instrument-school.vercel.app/payment/${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setLoading(false);
                 setTransaction(data);
-                console.log(data)
             })
             .catch((error) => {
                 console.error("Error fetching transaction data:", error);

@@ -8,21 +8,17 @@ import useAdmin from "../../../component/hook/useAdmin";
 import useInstructor from "../../../component/hook/useInstructor";
 
 const ClassSection = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext);
     const [, refetch] = useBookCart();
     const [classes] = useClasses();
     const navigate = useNavigate();
     const location = useLocation();
     const [isAdmin, isAdminLoading] = useAdmin();
-    console.log('admin panel', isAdmin)
     const [isInstructor, isInstructorLoading] = useInstructor();
-    console.log('instructor panel', isInstructor)
-
     const handleSelectButton = classItem => {
-        console.log(classItem)
         if (user && user.email) {
-            const selectBookClass = { classBookId: classItem._id, name: classItem.name, image: classItem.image, price: classItem.price, email: user.email }
-            fetch('http://localhost:5000/bookCart', {
+            const selectBookClass = { classBookId: classItem._id, name: classItem.name, image: classItem.image, price: classItem.price, email: user.email };
+            fetch('https://musician-instrument-school.vercel.app/bookCart', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -32,16 +28,15 @@ const ClassSection = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.insertedId) {
-                        refetch();//refetch cart on navbar
+                        refetch(); //refetch cart on navbar
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
                             title: 'Your class has been Booked Successfully',
                             showConfirmButton: false,
                             timer: 1500
-                        })
-                    }
-                    else {
+                        });
+                    } else {
                         Swal.fire({
                             text: "Please login to order the food",
                             icon: 'warning',
@@ -51,34 +46,31 @@ const ClassSection = () => {
                             confirmButtonText: 'Yes, delete it!'
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                navigate('/login', { state: { from: location } })
+                                navigate('/login', { state: { from: location } });
                             }
-                        })
+                        });
                     }
-                })
+                });
         }
-    }
-
-
-    console.log(classes);
+    };
 
     return (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {classes.map((classItem) => (
 
-                <div key={classItem.id} className="bg-white p-4 rounded-md shadow">
+                <div key={classItem._id} className="bg-white p-4 rounded-md shadow">
                     <img src={classItem.image} alt={classItem.name} className="w-full h-48 object-cover mb-4" />
-                    {console.log(classItem.image)}
                     <h2 className="text-xl font-bold mb-2">{classItem.name}</h2>
                     <p className="text-gray-700 mb-2">Instructor: {classItem.instructor}</p>
                     <p className={`text-sm mb-2 ${classItem.availableSeats === 0 ? "text-red-500" : ""}`}>
                         Available Seats: {classItem.availableSeats}
                     </p>
                     <p className="text-lg font-bold mb-4">Price: ${classItem.price}</p>
-                    <button onClick={() => handleSelectButton(classItem)}
-                        className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+                    <button
+                        onClick={() => handleSelectButton(classItem)}
+                        className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 || isAdmin || isInstructor ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
                             }`}
-                        disabled={classItem.availableSeats === 0 || isAdmin === true || isInstructor === true}
+                        disabled={classItem.availableSeats === 0 || isAdmin || isInstructor}
                     >
                         Select
                     </button>

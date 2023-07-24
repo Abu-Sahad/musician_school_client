@@ -4,7 +4,7 @@ const AdminClassList = () => {
     const [allCourse, setAllCourse] = useState([]);
 
     useEffect(() => {
-        fetch('https://musician-instrument-school-abu-sahad.vercel.app/admin-get-all-course')
+        fetch('https://musician-instrument-school.vercel.app/admin-get-all-course')
             .then(res => res.json())
             .then(data => setAllCourse(data))
     }, []);

@@ -9,7 +9,7 @@ const InstructorCard = () => {
 
   const getAllCourse = async () => {
     try {
-      const allData = await fetch('http://localhost:5000/get-all-course', {
+      const allData = await fetch('https://musician-instrument-school.vercel.app/get-all-course', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

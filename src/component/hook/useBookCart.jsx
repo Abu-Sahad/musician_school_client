@@ -7,7 +7,7 @@ const useBookCart = () => {
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ['bookCart', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookCart?email=${user?.email}`);
+            const res = await fetch(`https://musician-instrument-school.vercel.app/bookCart?email=${user?.email}`);
             return res.json();
         },
     });

@@ -20,7 +20,7 @@ const CheckoutForm = ({ cart, price, id }) => {
 
 
     const { data: card = {} } = useQuery(['create-payment-intent', price], async () => {
-        const res = await fetch('http://localhost:5000/create-payment-intent', {
+        const res = await fetch('https://musician-instrument-school.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const CheckoutForm = ({ cart, price, id }) => {
                 status: 'service pending',
                 itemNames: cart.map(item => item.name)
             }
-            axios.post('http://localhost:5000/payments', payment)
+            axios.post('https://musician-instrument-school.vercel.app/payments', payment)
                 .then(res => {
                     console.log(res.data);
                     const insertedPayment = res.data;

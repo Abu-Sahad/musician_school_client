@@ -8,7 +8,6 @@ const NavBar = () => {
 
     const { user, logOut } = useContext(AuthContext);
     const [cart] = useBookCart()
-    console.log(cart)
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -57,7 +56,21 @@ const NavBar = () => {
                                 <div className="badge badge-secondary">+{cart?.length || 0}</div>
                             </button>
                         </Link></li> */}
-                        <button className="btn btn-sm text-[#bd8731]"><Link className="me-2" to='/dashboard'>Dashboard</Link></button>
+                        <div style={{
+                            width: "25px",
+                            height: "25px",
+                            borderRadius: "50%", // This will create a circular shape
+                            overflow: "hidden" // To clip the image within the circular container
+                        }}>
+                            <img
+                                src={user.photoURL}
+                                alt="User"
+                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                            />
+                        </div>
+
+                        <button className="btn btn-sm ms-2 text-[#bd8731]"><Link className="me-2" to='/dashboard'>Dashboard</Link></button>
+
                         <button onClick={handleLogOut} className="btn btn-ghost btn-sm">LogOut</button>
                     </> : <>
                         <li><Link to="/login">Login</Link></li>

@@ -18,7 +18,7 @@ const Registration = () => {
             })
             .then(() => {
                 const saveUser = { name: data.name, email: data.email };
-                return fetch('http://localhost:5000/users', {
+                return fetch('https://musician-instrument-school.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

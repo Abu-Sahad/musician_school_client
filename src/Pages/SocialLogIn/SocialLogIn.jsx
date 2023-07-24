@@ -9,12 +9,12 @@ const SocialLogIn = () => {
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
     const handleGoogleSignIn = () => {
-        googleSignIn() 
+        googleSignIn()
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser)
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
-                return fetch('http://localhost:5000/users', {
+                return fetch('https://musician-instrument-school.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

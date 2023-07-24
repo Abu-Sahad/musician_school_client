@@ -4,7 +4,7 @@ const useClasses = () => {
     const [classes, setClasses] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('http://localhost:5000/class')
+        fetch('https://musician-instrument-school.vercel.app/class')
             .then(res => res.json())
             .then(data => {
                 setLoading(false)
