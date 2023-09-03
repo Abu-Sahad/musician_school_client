@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Kids",
+    "image": "https://i.ibb.co/QPmjXmW/Screen-Shot-2018-11-14-at-5-03-21-pm.png",
+    "description": "Our school is a solution for families who would like to expose their children to the world of music."
+  },
+  {
+    "id": 2,
+    "name": "Teens",
+    "image": "https://i.ibb.co/2d7sXyd/handsome-young-man-coat-looking-musical-sheet-playing-keyboard.jpg",
+    "description": "Our classes help to develop the skills necessary for music learning and a lifelong enjoyment of music."
+  },
+  {
+    "id": 3,
+    "name": "Adults",
+    "image": "https://i.ibb.co/LCPG8nx/musician-plays-violin-looks-inspired-positive.jpg",
+    "description": "We have programs for everyone. In addition to teaching music to children, we instruct adults and seniors."
+  },
+  {
+    "id": 4,
+    "name": "Private lessons",
+    "image": "https://i.ibb.co/m6kJmWQ/front-view-young-male-sitting-playing-guitar-red-wall-live-concert-color-musician-applause-band-play.jpg",
+    "description": "Private music lessons provide one-on-one attention, so teachers can focus on an individual student’s needs."
+  }
+]

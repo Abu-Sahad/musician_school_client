@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/001_guitar.png",
+    "name": "GUITAR",
+    "description": "Classical guitar is typically Spanish-derived"
+  },
+  {
+    "id": 2,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/002_piano.png",
+    "name": "PIANO",
+    "description": "The most versatile keyboard instrument"
+  },
+  {
+    "id": 3,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/003_violoncello.png",
+    "name": "VIOLONCELLO",
+    "description": "Known as the bass of the violin family"
+  },
+  {
+    "id": 4,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/004_saxophone.png",
+    "name": "SAXOPHONE",
+    "description": "From classical music to jazz, sax has it all."
+  },
+  {
+    "id": 5,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/005_balalaika.png",
+    "name": "BALALAIKA",
+    "description": "A Russian stringed musical instrument."
+  },
+  {
+    "id": 6,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/006_flute.png",
+    "name": "FLUTE",
+    "description": "An aerophone with a storied past."
+  },
+  {
+    "id": 7,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/008_trumpet.png",
+    "name": "TRUMPET",
+    "description": "One of the most ancient instruments."
+  },
+  {
+    "id": 8,
+    "image": "https://rhythmo.themerex.net/wp-content/uploads/2017/12/009_drum.png",
+    "name": "DRUM",
+    "description": "Find your place in the percussion section."
+  }
+]

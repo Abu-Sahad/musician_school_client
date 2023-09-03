@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { MdPayment } from "react-icons/md";

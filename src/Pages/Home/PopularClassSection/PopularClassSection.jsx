@@ -20,7 +20,7 @@ const PopularClassSection = () => {
 
     return (
 
-        <>
+        <div className="max-w-screen-xl mx-auto">
             <h4 className="text-center text-2xl font-bold text-red-500">Our Classes</h4>
             <h1 className="text-center text-5xl font-bold mb-10 text-[#3498DB]">Most Popular Classes</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -34,7 +34,7 @@ const PopularClassSection = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 

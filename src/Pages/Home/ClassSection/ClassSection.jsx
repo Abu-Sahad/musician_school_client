@@ -13,8 +13,8 @@ const ClassSection = () => {
     const [classes] = useClasses();
     const navigate = useNavigate();
     const location = useLocation();
-    const [isAdmin, isAdminLoading] = useAdmin();
-    const [isInstructor, isInstructorLoading] = useInstructor();
+    const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
     const handleSelectButton = classItem => {
         if (user && user.email) {
             const selectBookClass = { classBookId: classItem._id, name: classItem.name, image: classItem.image, price: classItem.price, email: user.email };

@@ -1,6 +1,6 @@
 const AboutOurSchool = () => {
     return (
-        <div className="mb-10">
+        <div className="mb-10 max-w-screen-xl mx-auto">
             <div className="mb-10">
                 <h4 className="text-center text-2xl font-bold text-red-500">Dedication to Instructor</h4>
                 <h1 className="text-center text-5xl font-bold mb-10 text-[#3498DB]">About The School</h1>
