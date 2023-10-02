@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 const MyBookCard = () => {
     const [cart, refetch] = useBookCart();
 
-    const totalPrice = cart.reduce((acc, value) => acc + value.price, 0);
+    const totalPrice = cart.reduce((acc, value) => acc + parseInt(value.price), 0);
+
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',

@@ -13,6 +13,7 @@ const NavBar = () => {
             .then(() => { })
             .catch(error => console.log(error));
     }
+    
     const commonLink = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/all-instructor'>Instructors</Link></li>

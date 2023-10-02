@@ -55,29 +55,31 @@ const ClassSection = () => {
     };
 
     return (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {classes.map((classItem) => (
+        <section className="max-w-screen-xl mx-auto mt-10 mb-10">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {classes.map((classItem) => (
 
-                <div key={classItem._id} className="bg-white p-4 rounded-md shadow">
-                    <img src={classItem.image} alt={classItem.name} className="w-full h-48 object-cover mb-4" />
-                    <h2 className="text-xl font-bold mb-2">{classItem.name}</h2>
-                    <p className="text-gray-700 mb-2">Instructor: {classItem.instructor}</p>
-                    <p className={`text-sm mb-2 ${classItem.availableSeats === 0 ? "text-red-500" : ""}`}>
-                        Available Seats: {classItem.availableSeats}
-                    </p>
-                    <p className="text-lg font-bold mb-4">Price: ${classItem.price}</p>
-                    <button
-                        onClick={() => handleSelectButton(classItem)}
-                        className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 || isAdmin || isInstructor ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
-                            }`}
-                        disabled={classItem.availableSeats === 0 || isAdmin || isInstructor}
-                    >
-                        Select
-                    </button>
-                </div>
+                    <div key={classItem._id} className="bg-white p-4 rounded-md shadow">
+                        <img src={classItem.image} alt={classItem.name} className="w-full h-48 object-cover mb-4" />
+                        <h2 className="text-xl font-bold mb-2">{classItem.name}</h2>
+                        <p className="text-gray-700 mb-2">Instructor: {classItem.instructor}</p>
+                        <p className={`text-sm mb-2 ${classItem.availableSeats === 0 ? "text-red-500" : ""}`}>
+                            Available Seats: {classItem.availableSeats}
+                        </p>
+                        <p className="text-lg font-bold mb-4">Price: ${classItem.price}</p>
+                        <button
+                            onClick={() => handleSelectButton(classItem)}
+                            className={`w-full py-2 px-4 rounded-md ${classItem.availableSeats === 0 || isAdmin || isInstructor ? "bg-red-500 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"
+                                }`}
+                            disabled={classItem.availableSeats === 0 || isAdmin || isInstructor}
+                        >
+                            Select
+                        </button>
+                    </div>
 
-            ))}
-        </div>
+                ))}
+            </div>
+        </section>
     );
 };
 

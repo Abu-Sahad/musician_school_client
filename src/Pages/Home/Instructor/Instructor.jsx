@@ -10,11 +10,11 @@ const Instructor = () => {
     }, []);
 
     return (
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-screen-xl mx-auto mt-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
                 {instructors.map((instructor, index) => (
-                    <div key={index} className="bg-white p-4 rounded shadow">
-                        <img src={instructor.image} alt={instructor.name} className="w-full h-48 object-cover mb-4" />
+                    <div key={index} className="bg-white p-4 rounded shadow text-center">
+                        <img src={instructor.image} alt={instructor.name} className="w-40 h-40 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" />
                         <h2 className="text-xl font-semibold mb-2">{instructor.name}</h2>
                         <p className="text-gray-500 mb-2">{instructor.email}</p>
                         {instructor.numClassesTaken && (

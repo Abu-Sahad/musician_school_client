@@ -17,7 +17,7 @@ const Registration = () => {
                 return updateProfileArea(data.name, data.photoURL); // Return the promise
             })
             .then(() => {
-                const saveUser = { name: data.name, email: data.email,image:data.photoUrl };
+                const saveUser = { name: data.name, email: data.email, image: data.photoURL };
                 return fetch('https://musician-instrument-school.vercel.app/users', {
                     method: 'POST',
                     headers: {
