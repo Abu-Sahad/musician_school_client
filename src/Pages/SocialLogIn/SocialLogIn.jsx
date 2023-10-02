@@ -13,7 +13,7 @@ const SocialLogIn = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser)
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email ,image:loggedInUser.photoURL}
                 return fetch('https://musician-instrument-school.vercel.app/users', {
                     method: 'POST',
                     headers: {
